@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wolgan.viagemfinal">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".categories.CategoryCreate" />
+        <activity
+            android:name=".categories.CategoryListActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wolgan.viagemfinal.MainActivity" />
+        </activity>
+        <activity
+            android:name=".categories.CategoryUpdateActivity"
+            android:parentActivityName=".categories.CategoryListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wolgan.viagemfinal.categories.CategoryListActivity" />
+        </activity>
+        <activity
+            android:name=".items.ItemListActivity"
+            android:label="@string/title_activity_item_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".items.ItemUpdateActivity"
+            android:parentActivityName=".items.ItemListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".items.ItemUpdateActivity" />
+        </activity>
+        <activity
+            android:name=".items.ItemCreateActivity"
+            android:parentActivityName=".items.ItemListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".items.ItemCreateActivity" />
+        </activity>
+        <activity
+            android:name=".lists.ListCreateActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wolgan.viagemfinal.MainActivity" />
+        </activity>
+        <activity android:name=".lists.ListUpdateActivity"
+
+            />
+        <activity android:name=".lists.ListInsertItem"></activity>
+    </application>
+
+</manifest>
